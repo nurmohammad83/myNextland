@@ -1,13 +1,14 @@
 'use client'
+import { variants } from "@/content/variantes";
 import { motion } from "framer-motion";
 
 const Pricing = () => {
   return (
     <section>
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.9 }}
+         variants={variants}
+         initial="hidden"
+         whileInView="visible"
         className="flex flex-col justify-center items-center"
       >
         <h2 className="text-lg sm:text-2xl font-bold font-poppins text-[#ff0080]">
@@ -73,7 +74,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="md:w-[30%]  mt-8 h-[490px] px-4 rounded-md border border-gray-700 py-12">
+        <div className="md:w-[30%] mt-8 h-[490px] px-4 rounded-md border border-gray-700 py-12">
           <div className="flex flex-col text-gray-400  justify-center items-center space-y-6">
             <h2 className="text-xl font-medium">Enterprise</h2>
             <p className="text-lg">

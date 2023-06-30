@@ -1,4 +1,5 @@
 'use client'
+import { variants } from "@/content/variantes";
 import { motion } from "framer-motion";
 
 const Testimonial = () => {
@@ -6,9 +7,9 @@ const Testimonial = () => {
     <>
       <section className="">
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9 }}
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
           motion
           className="flex flex-col justify-center items-center"
         >

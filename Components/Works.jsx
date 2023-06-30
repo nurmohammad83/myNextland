@@ -1,14 +1,15 @@
 'use client'
 import { cards } from "@/content/helper";
+import { variants } from "@/content/variantes";
 import { motion } from "framer-motion";
 
 const Works = () => {
   return (
     <div>
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.9 }}
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
         className="flex flex-col justify-center items-center"
       >
         <h2 className="text-lg sm:text-2xl font-bold font-poppins text-[#ff0080]">
